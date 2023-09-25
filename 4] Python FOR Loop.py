@@ -1,7 +1,7 @@
 # loop is controlled sturucture which can allow to use block of code repeatedly'
 # There are 2 Types 1] FOR, 2]While
 # 1] FOR :- Use when number of iteretions are Known.
-for i in range(1,11):	   # Here we can see that '11' is the exclusive vale which is it is not considerd by range.
+for i in range(1,11):	   # Here we can see that '11' is the exclusive value which is it is not considerd by range.
 	print(i)
 
 # Print only ODD Numbers within the range:--
@@ -19,6 +19,11 @@ int_list = [4,8,-2,10,5]          # Here to build logic we ahve to inititate the
 list_sum = 0
 for num in int_list:              # Now every Itration we have to add the initial value to elements of list.
 	list_sum = list_sum + num
-print("Total Sum Of Elements =",list_sum)
+print("Total Sum Of Elements =",list_sum) 
+# 0+4 = 4
+# 4+8 = 12
+# 12+(-2) = 10
+# 10+10 = 20
+# 20+5 = 25
 
 
