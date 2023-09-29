@@ -156,5 +156,5 @@ def example_of_kwargs(**kwargs):         # Here '**' we used as a dictionary
 
 example_of_kwargs( Host='198.191.1.1',Port=922813,Password='XXFGH' )
 
-example_of_kwargs( Port=922825,Password='JKLF',Host='170.80.89.80' )
-
+example_of_kwargs( Port=922813,Password='XXFGH',Host='198.191.1.1' )
+# Whatever the sequence is Out put will be in arragened manner
