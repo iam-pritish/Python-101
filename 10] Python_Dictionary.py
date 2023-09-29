@@ -94,3 +94,20 @@ if 'skills' in keys_in_dictionary:
     print(True)
 else:
     print(False)
+
+#-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*
+# What If we have to Update the "Key" in the dictionary without chnanign it's Value part
+# i.e. --> for ex:- 'Anand': 23  to 'Ishant': 23
+
+initial_dict = { 'Abhailash': 21 , 'Bhavesh': 43 ,
+                'Rohit': 90 , 'Anand' : 23}
+print("Initial Dictionary:",initial_dict)   # Output:- {'Abhailash': 21, 'Bhavesh': 43, 'Rohit': 90, 'Anand': 23}
+
+# Edit/Remove Key without changing Value
+
+initial_dict ['Ishant'] = initial_dict ['Anand']
+
+del initial_dict ['Anand']
+
+print("Final Dictionary:", initial_dict)   # Output:- {'Abhailash': 21, 'Bhavesh': 43, 'Rohit': 90, 'Ishant': 23}
+    
