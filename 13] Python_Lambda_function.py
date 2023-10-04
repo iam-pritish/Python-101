@@ -115,3 +115,65 @@ list_b = [9,8,7,6,5,4]
 sum_2_elements = lambda x , y : x + y
 result = list(map(sum_2_elements, list_a, list_b))
 print(result)
+
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+# How to Use reduce() in Lambda Function
+# In order to Use reduce () we have to import a Library called "functools"
+# This python function implement mathamatical techinq called 'Folding' or 'Reduction'
+# This fucntion will use when you need to apply a function to an iterable and reduce it to "Single" comulative value
+ 
+# here import functools
+
+import functools
+
+list_m = [1,2,3,4,5,6]
+add_two_nums = lambda x, y: x+y
+multiply_two_nums = lambda x,y: x*y
+
+
+result_1 = functools.reduce(add_two_nums,list_m)
+result_2 = functools.reduce(multiply_two_nums,list_m)
+print(result_1)                                     #---> 21
+print(result_2)                                     #---> 720
+
+
+#-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*--*---*-**--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--*-*
+
+# Here’s an example in which you use my_add() with initializer set to 100:
+def my_add(a,b):
+    result = a + b
+    print(f"{a}+{b}={result}")
+    return result
+from functools import reduce
+numbers = [1,2,3,4]
+reduce(my_add,numbers,100)              #---> 100+1=101
+#                                             101+2=103
+#                                             103+3=106
+#                                             106+4=110
+
+my_add(9,8)                             #---> 9+8=17
+
+
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+#The filter() method filters the given sequence with the help of a function that-
+# tests each element in the sequence to be true or not.
+# Syntax: filter(function, sequence)
+#  How to use Filter() function
+
+# Crete list of only ODD and Only Even list seperatly
+
+Seq_list = [1,2,3,4,5,6,7,8,9,8,7,6,5,4,3,2,1,2,3,4,5,6,4,5,7,8,9,6,5,4,3,2]
+
+filter_odd = lambda x : x % 2!= 0 
+
+filter_even = lambda x : x % 2 == 0
+
+result_o = list(filter(filter_odd,Seq_list))
+result_e = list(filter(filter_even,Seq_list))
+
+
+print(result_o)                             #--->[1, 3, 5, 7, 9, 7, 5, 3, 1, 3, 5, 5, 7, 9, 5, 3]
+
+print(result_e)                             #--->[2, 4, 6, 8, 8, 6, 4, 2, 2, 4, 6, 4, 8, 6, 4, 2]
