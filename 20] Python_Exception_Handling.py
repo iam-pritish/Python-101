@@ -70,4 +70,30 @@ except Exception as ERROR:
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 ## Use of Else Block:-
+a = 5
+try:
+    #result = a/0
+    result = a/5
+except ZeroDivisionError:
+    print("Error occured coz of division by 0..!!")
+else:
+    print("Calculation Compeleted..!!")
+    print(result)       
+
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+#Use of Finally in this Exception handling 
+
+a = 12
+
+try:
+    result = a/0
+    #result = a/2
+except ZeroDivisionError:
+    print(" Error occured due to division by 0")
+else:
+    print("Calculation Completed..!!")
+    print(result)
+finally:
+    print("Doesn't Matter Try-Except, But I will Print this for myself..!!!")
 
